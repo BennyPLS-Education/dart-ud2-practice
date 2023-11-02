@@ -15,6 +15,7 @@ class WidgetPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Widgets'),
         automaticallyImplyLeading: false,
+        toolbarHeight: 70,
       ),
       body: _body(),
       floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
@@ -29,6 +30,7 @@ class WidgetPage extends StatelessWidget {
     );
   }
 
+  /// This method returns a ListView with all the widgets
   Widget _body() {
     return Tooltip(
       showDuration: const Duration(seconds: 3),
@@ -55,8 +57,8 @@ class WidgetPage extends StatelessWidget {
     );
   }
 
+  /// This method opens a hyperlink in the application
   void _openHiperLink() {
-    launchUrlString("https://www.google.com",
-        mode: LaunchMode.inAppBrowserView);
+    launchUrlString("https://www.google.com", mode: LaunchMode.inAppBrowserView);
   }
 }

@@ -10,6 +10,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      onGenerateRoute: generateRoutes,
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
@@ -29,11 +30,10 @@ class App extends StatelessWidget {
 
   getTheme() {
     return ThemeData(
-      useMaterial3: true,
-      colorScheme: const ColorScheme.dark(
-        primary: Colors.redAccent,
-      )
-    ).copyWith(
+        useMaterial3: true,
+        colorScheme: const ColorScheme.dark(
+          primary: Colors.redAccent,
+        )).copyWith(
       appBarTheme: const AppBarTheme(
         color: Colors.redAccent,
       ),

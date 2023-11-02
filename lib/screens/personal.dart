@@ -33,10 +33,12 @@ class _PersonalPageState extends State<PersonalPage> {
           "${persona.bornDate.year}-${persona.bornDate.month}-${persona.bornDate.day}";
     }
 
+    /// This is the main widget of the page
     return Scaffold(
       appBar: AppBar(
         title: const Text('Aguilo Pons'),
         automaticallyImplyLeading: false,
+        toolbarHeight: 70,
       ),
       body: _body(),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
@@ -51,6 +53,7 @@ class _PersonalPageState extends State<PersonalPage> {
     );
   }
 
+  /// This method returns a ListView with all the fields to modify the persona
   _body() {
     return ListView(
       padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
@@ -68,10 +71,12 @@ class _PersonalPageState extends State<PersonalPage> {
     );
   }
 
+  /// This method returns a Divider
   Widget _spacer() {
     return const Divider(color: Colors.black);
   }
 
+  /// This method modify the persona with TextField with a name field
   Widget _userName() {
     return TextField(
       controller: _nameController,
@@ -89,6 +94,7 @@ class _PersonalPageState extends State<PersonalPage> {
     );
   }
 
+  /// This method modify the persona with TextField with a surname field
   Widget _userSurname() {
     return TextField(
       controller: _surnameController,
@@ -106,6 +112,7 @@ class _PersonalPageState extends State<PersonalPage> {
     );
   }
 
+  /// This method modify the persona with TextField with a email field
   Widget _userEmail() {
     return TextField(
       controller: _emailController,
@@ -122,6 +129,7 @@ class _PersonalPageState extends State<PersonalPage> {
     );
   }
 
+  /// This method modify the persona with TextField with a password field
   Widget _userPassword() {
     return TextField(
       controller: _passwordController,
@@ -140,7 +148,7 @@ class _PersonalPageState extends State<PersonalPage> {
     );
   }
 
-  /// This method returns a TextField with a date picker dialog
+  /// This method modify the persona with TextField with a date field
   Widget _userBornDate(BuildContext context) {
     return TextField(
       enableInteractiveSelection: false,
